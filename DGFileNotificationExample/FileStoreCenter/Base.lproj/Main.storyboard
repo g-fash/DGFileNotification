@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Z86-i6-pHk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rGu-L8-YLa">
+            <objects>
+                <navigationController id="Z86-i6-pHk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iEh-z5-RKy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xdr-RJ-zTg" kind="relationship" relationship="rootViewController" id="Ovp-1j-cmL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-Ve-jP8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="233"/>
+        </scene>
+        <!--File Notification Controller-->
+        <scene sceneID="9QS-jM-0w2">
+            <objects>
+                <tableViewController id="xdr-RJ-zTg" customClass="FileNotificationController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zH6-yR-kwp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="xdr-RJ-zTg" id="31K-iE-T3C"/>
+                            <outlet property="delegate" destination="xdr-RJ-zTg" id="eNG-H6-2FT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="9nh-Ab-CuO">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Cancel Task" id="dbW-uS-d8S">
+                                <connections>
+                                    <action selector="actionCancel:" destination="xdr-RJ-zTg" id="gEh-uV-nW8"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Resume Task" id="E8z-hA-xp4">
+                                <connections>
+                                    <action selector="actionResume:" destination="xdr-RJ-zTg" id="oR2-16-ZCd"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDB-Wg-tfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="226"/>
+        </scene>
+    </scenes>
+</document>
